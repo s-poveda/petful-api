@@ -53,7 +53,7 @@ class Queue {
 
   show() {
     // Return the next item in the queue.
-    return this.tail;
+    return this.tail.value;
   }
 
   all() {
@@ -61,7 +61,7 @@ class Queue {
     const queue = new Array(this.length);
     let item = this.tail;
     for (let i = 0; i < this.length; i++) {
-      queue[i] = item;
+      queue[i] = item.value;
       item = item.last;
     }
     return queue;
