@@ -2,7 +2,9 @@
   "name": "petful-server",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server"
+		"start": "node server",
+    "dev": "nodemon server",
+		"deploy": "git push heroku main"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -10,10 +12,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.2.0",
-    "knex": "^0.20.10",
-    "pg": "^7.18.2"
-  },
-  "devDependencies": {
     "morgan": "^1.10.0"
-  }
+  },
+  "devDependencies": {}
 }
