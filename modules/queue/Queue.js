@@ -36,6 +36,7 @@ class Queue {
 
   dequeue() {
     //remove the oldest task from the queue
+		if (!this.length) return null;
     if (this.length === 1) {
       const data = this.head;
       this.length--;
@@ -53,7 +54,11 @@ class Queue {
 
   show() {
     // Return the next item in the queue.
-    return this.tail.value;
+    try {
+			return this.tail.value;
+		} catch (e) {
+			return null;
+		}
   }
 
   all() {
