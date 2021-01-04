@@ -36,7 +36,6 @@ class Queue {
 
   dequeue() {
     //remove the oldest task from the queue
-		if (!this.length) return null;
     if (this.length === 1) {
       const data = this.head;
       this.length--;
